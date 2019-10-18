@@ -1,0 +1,28 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `
+    <div class="container">
+  <h1>Congratulations!</h1>
+  <h4>You got your component to display!</h4>
+  <hr>
+  <h5>How does your event look below?</h5>
+  
+  <div style="margin-top:30px">
+    Event: 
+  </div>
+  <div>
+    Date:
+  </div>
+  <div>
+    Time: 
+  </div>
+  <div>
+    Address: 
+    </div>
+</div>
+  `,
+})
+export class AppComponent {
+}
