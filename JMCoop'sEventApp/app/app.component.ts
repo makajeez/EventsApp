@@ -10,19 +10,27 @@ import { Component } from '@angular/core';
   <h5>How does your event look below?</h5>
   
   <div style="margin-top:30px">
-    Event: 
+    Event: {{event.name}}
   </div>
   <div>
-    Date:
+    Date: {{event.date}}
   </div>
   <div>
-    Time: 
+    Time: {{event.time}}
   </div>
   <div>
-    Address: 
+    Address: {{event.location.address}}
     </div>
 </div>
   `,
 })
 export class AppComponent {
+  event={
+    name:'ngConf 2025', 
+    date: '3/1/2025', 
+    time: '8am', 
+    location: {address: '123 Main St', 
+                city: 'Salt Lake City, UT', 
+                country: 'USA'}
+  }
 }
