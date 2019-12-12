@@ -1,6 +1,7 @@
 # EventsApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
+run `npm install` in the repo to download node_modules, `npm install ngx-bootstrap --save` for twitter bootstrap `npm install jquery` for jquery obviously `npm install toastr --save` although not neccessary
 
 ## Development server
 
