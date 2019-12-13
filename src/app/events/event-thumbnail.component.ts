@@ -31,6 +31,6 @@ import { IEvent } from './shared/event.model';
     `]
 })
 export class EventThumbnailComponent {
-    @Input() event:any
-    
+    @Input() event: IEvent; // @Input allows this child component to communicate with its parent
+
 }
