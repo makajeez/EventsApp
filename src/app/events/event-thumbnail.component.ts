@@ -16,16 +16,17 @@ import { IEvent } from './shared/event.model';
             <div *ngIf="event?.location">
                 <span>Location: {{event?.location?.address}}</span>
                 <span class="pad-left">{{event?.location?.city}},{{event.location?.country}}</span>
-            </div>  
-            <div>
+            </div>
+            <div *ngIf="event?.onlineUrl"> <!--you can use [hidden]="!event?.location" in the divs-->
                 OnlineUrl: {{event?.onlineUrl}}
             </div>
         </div>
     </div>
 `,
     styles: [`
+    .bold { font-weight: bold;}
     .thumbnail {min-height:210px;}
-    .pad-left {margin-left:5px;}
+    .pad-left {margin-left:10px;}
     .well div{color: #bbb;}
     `]
 })
