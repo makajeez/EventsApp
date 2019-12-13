@@ -33,4 +33,13 @@ import { IEvent } from './shared/event.model';
 export class EventThumbnailComponent {
     @Input() event: IEvent; // @Input allows this child component to communicate with its parent
 
+    getStartTimeClass() {
+        if (this.event && this.event.time === '8:00 am') {
+            return ['bold'];
+        } else if (this.event && this.event.time === '9:00 am') {
+            return ['bold'];
+        } else {
+            return['bold'];
+        }
+    }
 }
