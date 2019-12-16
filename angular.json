@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Netflix": {
+    "EventsApp": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,19 +13,25 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Netflix",
+            "outputPath": "dist/EventsApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/images"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/toastr/build/toastr.min.css",
+              "node_modules/ngf-bootstrap/dist/bootstrap.min.css",
+               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/toastr/build/toastr.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -57,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Netflix:build"
+            "browserTarget": "EventsApp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Netflix:build:production"
+              "browserTarget": "EventsApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Netflix:build"
+            "browserTarget": "EventsApp:build"
           }
         },
         "test": {
@@ -102,7 +108,7 @@
         }
       }
     },
-    "Netflix-e2e": {
+    "EventsApp-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Netflix:serve"
+            "devServerTarget": "EventsApp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Netflix:serve:production"
+              "devServerTarget": "EventsApp:serve:production"
             }
           }
         },
@@ -131,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "Netflix"
+  "defaultProject": "EventsApp"
 }
